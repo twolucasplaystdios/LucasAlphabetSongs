@@ -5,7 +5,7 @@
 #branch {
     background-color: wheat;
 }
-.here {
+.here, a {
     background-color: wheat;
     color: red;
 }
