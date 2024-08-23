@@ -1,24 +1,37 @@
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../../../../styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAS - Main Page</title>
+
+    <title>LAS - Bopomofo</title>
     
 </head>
 <body width="100%" height="100%">
-    
-    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="95%" width="95%" height="10" fill="lightgray" />
-
-        <rect id="progress" x="0" y="95%" width="0" height="10" fill="blue" />
-        <circle cx="5" cy="5" r="5" style="fill:red;">
+    <svg id="vec" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        
+        <rect id="main" x="0" y="95%" length="" height="10" fill="gray" />
+        <rect id="progress" x="0" y="95%" length="" height="10" fill="blue" />
+        <circle id="circ-progress" cx="0" cy="96%" r="5" y="95%" style="fill:red;">
             <animate
-            attributeName="cy"
+            attributeName="cx"
             begin="0s"
-            dur="8s"
-            from="50"
-            to="90%"
+            dur="180s"
+            from="0"
+            to="100%"
             repeatCount="1" />
-            </circle>
+        </circle>
+        
     </svg>
 </body>
+<script>
+    var svg = document.getElementById("vec");
+    var circ = document.getElementById("circ-progress");
+    var progress = document.getElementById("progress");
+    var main = document.getElementById("main");
+    progress.setAttribute("width", `${(120/180)}%`)
+    
+    
+    main.setAttribute("width", `${100}%`)
+    
+    
+</script>
